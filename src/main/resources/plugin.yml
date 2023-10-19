@@ -1,0 +1,4 @@
+name: PositionTracker
+version: '${version}'
+main: org.yanguke.postrack.PositionTracker
+api-version: '1.20'
