@@ -1,8 +1,8 @@
-package org.yanguke.postrack;
+package org.ganyuke.postrack;
 
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.yanguke.postrack.listeners.PlayerJoinListener;
+import org.ganyuke.postrack.listeners.PlayerJoinListener;
 
 public final class PositionTracker extends JavaPlugin implements Listener {
     static PositionTracker plugin;

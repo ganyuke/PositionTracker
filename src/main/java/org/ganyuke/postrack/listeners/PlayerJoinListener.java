@@ -1,11 +1,11 @@
-package org.yanguke.postrack.listeners;
+package org.ganyuke.postrack.listeners;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
-import org.yanguke.postrack.PositionTracker;
+import org.ganyuke.postrack.PositionTracker;
 
 public class PlayerJoinListener implements Listener {
     @EventHandler
