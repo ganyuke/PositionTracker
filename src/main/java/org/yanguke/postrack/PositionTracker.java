@@ -1,28 +1,21 @@
 package org.yanguke.postrack;
 
-import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.yanguke.postrack.listeners.PlayerJoinListener;
 
 public final class PositionTracker extends JavaPlugin implements Listener {
+    static PositionTracker plugin;
+    public static PositionTracker getPlugin() {
+        return plugin;
+    }
 
     @Override
     public void onEnable() {
         // Plugin startup logic
+        plugin = this;
         this.getLogger().info("plugin hath been loaded");
-        this.getServer().getPluginManager().registerEvents(this, this);
-    }
-
-    @EventHandler
-    public void onPlayerJoin(PlayerJoinEvent event) {
-        this.getLogger().info("PLAYER JOINED: " + event.getPlayer().getName());
-    }
-
-    @EventHandler
-    public void onPlayerQuit(PlayerQuitEvent event) {
-        this.getLogger().info("PLAYER LEFT: " + event.getPlayer().getName());
+        this.getServer().getPluginManager().registerEvents(new PlayerJoinListener(), this);
     }
 
     @Override
