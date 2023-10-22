@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id "com.github.johnrengelman.shadow" version "8.1.1"
 }
 
 group = 'org.yanguke'
@@ -19,6 +20,11 @@ repositories {
 
 dependencies {
     compileOnly "io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT"
+    implementation 'com.opencsv:opencsv:5.8'
+}
+
+shadowJar {
+    relocate('com.opencsv:opencsv', 'org.yanguke.postrack.dependencies.bstats')
 }
 
 def targetJavaVersion = 17
