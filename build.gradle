@@ -3,7 +3,7 @@ plugins {
     id "com.github.johnrengelman.shadow" version "8.1.1"
 }
 
-group = 'org.yanguke'
+group = 'org.ganyuke'
 version = '0.0.1-1.20.1'
 
 repositories {
@@ -24,7 +24,7 @@ dependencies {
 }
 
 shadowJar {
-    relocate('com.opencsv:opencsv', 'org.yanguke.postrack.dependencies.bstats')
+    relocate('com.opencsv:opencsv', 'org.ganyuke.postrack.dependencies.opencsv')
 }
 
 def targetJavaVersion = 17
